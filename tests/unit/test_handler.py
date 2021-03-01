@@ -8,4 +8,5 @@ def test_base_route():
     prediction_result()
     client = app.test_client()
     response = client.get('/student')
+    assert 200
     print(response)
