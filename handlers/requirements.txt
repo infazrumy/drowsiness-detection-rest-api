@@ -1,7 +1,4 @@
-requests
+wheel
 flask-lambda-python36
 pytest
-wheel
 aws-sam-cli
-awscli
-wheel
