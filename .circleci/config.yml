@@ -15,7 +15,8 @@ jobs:
       - run:
           name: Build AWS  Serverless Application Model
           command:  |
-            which sam
+            . venv/bin/activate
+            pip list
             sam build
       - run:
           name: Run Unit Tests 
