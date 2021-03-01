@@ -2,3 +2,4 @@ wheel
 flask-lambda-python36
 pytest
 aws-sam-cli
+pytest-cov
