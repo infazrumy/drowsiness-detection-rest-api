@@ -16,7 +16,7 @@ Resources:
     Properties:
       CodeUri: handlers/
       Handler: app.app
-      Runtime: python3.7
+      Runtime: python3.8
       Events:
         APIInfo:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
