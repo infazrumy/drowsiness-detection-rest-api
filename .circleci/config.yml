@@ -26,6 +26,8 @@ jobs:
           command: |
             . venv/bin/activate
             python -m pytest --cov=tests/unit --cov-report=xml  
+            mkdir coverage
+            mv ./coverage.xml ./coverage/
       - codecov/upload:
           file: './coverage/coverage.xml'
           token: $CODECOV_TOKEN
