@@ -1,0 +1,32 @@
+version: 2.1
+
+jobs:
+  run_tests:
+    docker:
+      - image: cimg/python:3.7.8
+    steps:
+      - checkout
+      - run:
+          name: Install Python Dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r handlers/requirements.txt
+      - run:
+          name: Build AWS  Serverless Application Model
+          command:  |
+            sam build
+      - run:
+          name: Run Unit Tests 
+          command: |
+            . venv/bin/activate
+            python -m pytest --junitxml=test-reports/junit.xml      
+      - store_test_results:
+          path: test-reports
+      - store_artifacts:
+          path: test-reports    
+
+workflows:
+  build_test:
+    jobs:
+      - run_tests
