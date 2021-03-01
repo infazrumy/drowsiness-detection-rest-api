@@ -15,6 +15,7 @@ jobs:
       - run:
           name: Build AWS  Serverless Application Model
           command:  |
+            which sam
             sam build
       - run:
           name: Run Unit Tests 
