@@ -3,11 +3,9 @@ from handlers.app import prediction_result
 
 
 def test_base_route():
-    app = Flask(__name__)
-    configure_routes(app)
-    client = app.test_client()
-    url = '/'
 
-    response = client.get(url)
-    assert response.get_data() == b'Hello, World!'
-    assert response.status_code == 200
+    app = FlaskLambda(__name__)
+    prediction_result()
+    client = app.test_client()
+    response = client.get('/student')
+    print(response)
