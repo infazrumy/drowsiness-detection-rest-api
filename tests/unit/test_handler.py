@@ -3,10 +3,11 @@ from handlers.app import prediction_result
 
 
 def test_base_route():
-
-    app = FlaskLambda(__name__)
-    prediction_result()
+    app = Flask(__name__)
+    configure_routes(app)
     client = app.test_client()
-    response = client.get('/student')
-    assert 200
-    print(response)
+    url = '/'
+
+    response = client.get(url)
+    assert response.get_data() == b'Hello, World!'
+    assert response.status_code == 200
