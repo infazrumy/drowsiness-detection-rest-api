@@ -4,3 +4,4 @@ pytest
 wheel
 aws-sam-cli
 awscli
+wheel
