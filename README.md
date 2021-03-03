@@ -1,7 +1,7 @@
 
 ![CircleCI](https://img.shields.io/circleci/build/github/infazrumy/drowsiness-detection-rest-api?token=645b92edac9525ae62f76f98712f3b01251351ee)
 ![Codecov](https://img.shields.io/codecov/c/github/infazrumy/drowsiness-detection-rest-api?token=YA7T4012B4)
-
+[![CodeScene Code Health](https://codescene.io/projects/13532/status-badges/code-health)](https://codescene.io/projects/13532)
 
 # drowsiness-detection-api
 
